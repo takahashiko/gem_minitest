@@ -29,5 +29,4 @@ class GemMinitestTest < Minitest::Test
     assert_equal(true,  @main.odd?(-1)) 
     assert_equal(false, @main.odd?(-2))
   end 
-
 end
