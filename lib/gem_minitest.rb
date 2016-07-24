@@ -15,6 +15,25 @@ module GemMinitest
        else 
          return false
        end
-     end
+    end
+    #引数が0 以外ではじまる4 桁の数字であり，なおかつ，値が偶数ならば真を返す
+    def check_number?(n)
+        #0チェック
+        if n==0 then
+            return false
+        end
+         
+        #桁チェック
+        if n.to_s.length != 4 then
+            return false
+        end
+         
+        #偶数チェック
+        if odd?(n) then
+            return false
+        else
+            return true
+        end
+    end
   end
 end
