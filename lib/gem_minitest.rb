@@ -50,8 +50,8 @@ module GemMinitest
     end
 
     #引数として割る数と割られる数を取り，割り算をした結果を返す．ただし，0 で割り算をしたら例外を発生する
-#    def divide?(num_n, num_d)
-#        return (num_n / num_d).to_f
-#    end
+    def divide?(num_n, num_d)
+        return (num_n / num_d).to_f
+    end
   end
 end
