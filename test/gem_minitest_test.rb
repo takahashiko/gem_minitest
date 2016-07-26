@@ -53,4 +53,5 @@ class GemMinitestTest < Minitest::Test
     assert_equal(2,     @main.divide?(50, 25))   
     assert_equal(20,    @main.divide?(200, 10))
   end
+
 end
