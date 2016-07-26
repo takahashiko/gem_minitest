@@ -30,11 +30,27 @@ class GemMinitestTest < Minitest::Test
     assert_equal(true,  @main.odd?(-1)) 
     assert_equal(false, @main.odd?(-2))
   end 
+
  #check_numberメソッドテスト
   def test_check_number?
     assert_equal(false, @main.check_number?(0))
     assert_equal(false, @main.check_number?(123))
     assert_equal(false, @main.check_number?(1001))
     assert_equal(true , @main.check_number?(1000))
+  end
+
+ #enough_lengthメソッドテスト
+  def test_enough_length?
+    #境界値チェック2,3,8,9桁
+    assert_equal(false, @main.enough_length?("12"))
+    assert_equal(true,  @main.enough_length?("123"))
+    assert_equal(true,  @main.enough_length?("12345678"))
+    assert_equal(false, @main.enough_length?("123456789"))
+  end
+
+ #divideメソッドテスト
+  def test_divide?
+    assert_equal(2,     @main.divide?(50, 25))   
+    assert_equal(20,    @main.divide?(200, 10))
   end
 end
