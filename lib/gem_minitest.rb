@@ -53,5 +53,27 @@ module GemMinitest
     def divide?(num_n, num_d)
         return (num_n / num_d).to_f
     end
+
+    #引数に数値を1 つとる．3 の倍数の時は”Fizz”を返す．5 の倍数の時は”Buzz”を返す．3 と5 の公倍数のときは”FizzBuzz”を返す．
+    def fizz_buzz?(n)
+        if n==0 then
+            return ""
+        end
+         
+        if (((n % 3)==0) && ((n % 5)==0)) then
+            return "FizzBuzz"
+        end
+         
+        if (n % 3)==0 then
+            return "Fizz"
+        end
+         
+        if (n % 5)==0 then
+            return "Buzz"
+        end
+         
+        return ""
+    end
+
   end
 end
