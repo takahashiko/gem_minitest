@@ -69,7 +69,7 @@ class GemMinitestTest < Minitest::Test
   end
 
  #Helloメソッドテスト
-  def test_hello
+  def test_hello?
       assert_output(/Hello/) { @main.hello?}
   end
 
