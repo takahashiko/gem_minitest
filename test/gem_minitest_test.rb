@@ -54,4 +54,23 @@ class GemMinitestTest < Minitest::Test
     assert_equal(20, @main.divide?(200, 10))
   end
 
+ #fizz_buzzメソッドテスト
+  def test_fizz_buzz?
+      assert_equal("",         @main.fizz_buzz?(0))
+      assert_equal("",         @main.fizz_buzz?(1))
+      assert_equal("Fizz",     @main.fizz_buzz?(3))
+      assert_equal("",         @main.fizz_buzz?(4))
+      assert_equal("Buzz",     @main.fizz_buzz?(5))
+      assert_equal("Fizz",     @main.fizz_buzz?(6))
+      assert_equal("",         @main.fizz_buzz?(14))
+      assert_equal("FizzBuzz", @main.fizz_buzz?(15))
+      assert_equal("",         @main.fizz_buzz?(16))
+      assert_equal("",         @main.fizz_buzz?(101))
+  end
+
+ #Helloメソッドテスト
+  def test_hello
+      assert_output(/Hello/) { @main.hello?}
+  end
+
 end
